@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "eLuLCe0zj1Y=",
+  "success": true,
+  "projectFilePath": "/Users/hgyee/Desktop/KAIST 26S/프밍이/project/SixSevenGen/SixSevenGen.fsproj",
+  "expectedPackageFiles": [
+    "/Users/hgyee/.nuget/packages/fparsec/1.1.1/fparsec.1.1.1.nupkg.sha512",
+    "/Users/hgyee/.nuget/packages/fsharp.core/10.0.103/fsharp.core.10.0.103.nupkg.sha512"
+  ],
+  "logs": []
+}

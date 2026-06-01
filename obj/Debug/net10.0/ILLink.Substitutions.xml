@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="SixSevenGen">
+    <resource name="FSharpSignatureData.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpOptimizationData.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.SixSevenGen" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.SixSevenGen" action="remove"></resource>
+  </assembly>
+</linker>
