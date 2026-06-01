@@ -47,29 +47,30 @@ The goal is to construct an arithmetic expression as close as possible to a targ
 ### Example Session
 ```
 === Attempt 2 ===
-Numbers: [8, 8, 13, 20, 553]
-Operators: [+, -, *, %]
+Numbers: [6, 6, 56, 15, 423]
+Operators: [+, -, -, *]
 Optional: [(, )]
 Available Targets: [676, 6767]
 
 Do you want to swap any of the operators?
 Press [y] for [YES], any other key for [NO]
-Make your decision within 15 seconds...  y
+Make your decision within 15 seconds...  y  
+
 Enter the index (0 - 3) of the operator to swap:
    0: +
    1: -
-   2: *
-   3: %
+   2: -
+   3: *
 1
-New operators: [+, *, *, %]
+New operators: [+, +, -, *]
 
-Please enter your answer within 105.6 seconds...
-
+Please enter your answer within 111.3 seconds...
 Input example: 67,97-33+5+(276%1)
-YOUR ANSWER = 6767,553*13+20*8%8 
 
-Your expression evaluated to: 7189
-Score for this attempt: 94.129921
+YOUR ANSWER = 676,423+(56-15)*6+6
+
+Your expression evaluated to: 675
+Score for this attempt: 99.9
 ```
 
 ## Modifications from the original requirements document
