@@ -37,10 +37,10 @@ The goal is to construct an arithmetic expression as close as possible to a targ
 
     Then, 
     - A 120-second timer starts. Enter your target and expression,
-```
+
 //input example
 6767,96%(13+7)*420+6
-```
+
     - Follow this exact format (TARGET,EXPRESSION). Space characters are allowed (ignored)
     - Valid input: the used target is removed from future attempts, and your score is shown.
     - Invalid input or timeout: 0 score. On 0 score, set of available targets remian unchanged.
