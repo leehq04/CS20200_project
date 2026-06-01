@@ -36,7 +36,7 @@ module Main =
         timer2.AutoReset <- false
         timer2.Elapsed.Add(fun _ ->
             timedOut2 <- true
-            printfn "\nSwap timed out, no swap performed\nPress enter to proceed...")
+            printf "\n\nSwap timed out, no swap performed\nPress enter to proceed...")
         timer2.Start()
         printf "\nDo you want to swap any of the operators?\nPress [y] for [YES], any other key for [NO]\nMake your decision within 15 seconds...  "
         let input = System.Console.ReadLine()
@@ -60,7 +60,7 @@ module Main =
             | None -> 
                 ops
             | Some "y" ->
-                printfn "Enter the index (0 - %d) of the operator to swap:" (ops.Length - 1)
+                printfn "\nEnter the index (0 - %d) of the operator to swap:" (ops.Length - 1)
                 for i in 0 .. (ops.Length - 1) do
                     printfn "   %d: %s" i (ops.[i] |> operToString)
                 match System.Int32.TryParse(System.Console.ReadLine().Trim()) with
@@ -83,9 +83,9 @@ module Main =
             (None, finOps)
         else
             let remaining = 120.0 - (System.DateTime.Now - startTime).TotalSeconds
-            printfn "\nPlease enter your answer within %.1f seconds...\n" remaining
+            printfn "\nPlease enter your answer within %.1f seconds..." remaining
             printfn "Input example: 67,97-33+5+(276%%1)"
-            printf "YOUR ANSWER = "
+            printf "\nYOUR ANSWER = "
             let input = System.Console.ReadLine()
             timer.Stop()
             timer.Dispose()
@@ -103,7 +103,7 @@ module Main =
         let rec gameLoop (state: Gamestate) =
             if state.CurrentAttempt > 3 then
                 // game over
-                printfn "\nGame over! Final score: %f" (List.sum state.Scores)
+                printfn "\nGame over! Final score: %.1f / 300" (List.sum state.Scores)
             else
                 printfn "\n=== Attempt %d ===" state.CurrentAttempt
                 let nums = randomNumberGenerator ()
@@ -116,14 +116,14 @@ module Main =
                 match timedInput ops with
                 | (None, _) ->
                     // score 0, continue
-                    printfn "Failed to answer within 120 seconds\nScore for this attempt: 0.0"
+                    printfn "\nFailed to answer within 120 seconds\nScore for this attempt: 0.0"
                     gameLoop { state with 
                                 CurrentAttempt = state.CurrentAttempt + 1
                                 Scores = state.Scores @ [0.0] }
                 | (Some input, finOps) ->
                     match parser input with
                     | Error e ->
-                        printfn "Invalid input: %s" e
+                        printfn "\nInvalid input: %s" e
                         printfn "Score for this attempt: 0.0"
                         gameLoop { state with
                                     CurrentAttempt = state.CurrentAttempt + 1
@@ -138,7 +138,7 @@ module Main =
                         if validate attObj state then
                             match evaluate attObj with
                             | Error e ->
-                                printfn "Invalid input: %s" e
+                                printfn "\nInvalid input: %s" e
                                 printfn "Score for this attempt: 0.0"
                                 gameLoop { state with
                                             CurrentAttempt = state.CurrentAttempt + 1
@@ -147,14 +147,14 @@ module Main =
                                 let userDist = abs (userVal - tar)
                                 let userScore = calcScore tar userDist
                                 printfn "\nYour expression evaluated to: %d" userVal
-                                printfn "Score for this attempt: %f" userScore
+                                printfn "Score for this attempt: %.1f" userScore
                                 let newAT = state.AvailableTargets |> (Set.remove tar)
                                 gameLoop { state with
                                             AvailableTargets = newAT
                                             CurrentAttempt = state.CurrentAttempt + 1
                                             Scores = state.Scores @ [userScore] }
                         else
-                            printfn "Invalid input: numbers or operators don't match\nScore for this attempt: 0.0"
+                            printfn "\nInvalid input: numbers or operators don't match\nScore for this attempt: 0.0"
                             gameLoop { state with
                                         CurrentAttempt = state.CurrentAttempt + 1
                                         Scores = state.Scores @ [0.0] }

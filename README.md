@@ -1,5 +1,5 @@
 # 67 Generator
-A command-line arithmetic puzzle game built with **F# / .NET 9**.
+A command-line arithmetic puzzle game built with **F# / .NET 10**.
 Construct arithmetic expressions to get as close as possible to a target number.
 
 ---
@@ -7,8 +7,8 @@ Construct arithmetic expressions to get as close as possible to a target number.
 ## Getting Started
 
 ### Prerequisites
-- [.NET 9 SDK](https://dotnet.microsoft.com/download)  
-  Verify with: `dotnet --version` (should show `9.x.x`)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)  
+  Verify with: `dotnet --version` (should show `10.x.x`)
 
 ### Run
 ```bash
@@ -36,10 +36,10 @@ The goal is to construct an arithmetic expression as close as possible to a targ
     - You may swap one of the operators (15 seconds).
 
     Then, 
-    - A 120-second timer starts. Enter your target and expression (example: `6767,96%(13+7)*420+6`)
+    - A 120-second timer starts. Enter your target and expression (example: `6767,96%(13+7)*420+6` )
     - Follow this exact format (TARGET,EXPRESSION). Space characters are allowed (ignored)
-    - Valid input: the used target is removed from future attempts, and your score is shown.
-    - Invalid input or timeout: 0 score. On 0 score, set of available targets remian unchanged.
+    - In case of valid input, the used target is removed from future attempts, and your score is shown.
+    - In case of invalid input or timeout, 0 score is given. The set of available targets remian unchanged.
 
 3. Your final score is the sum of scores across all three attempts.
 
@@ -48,7 +48,7 @@ The goal is to construct an arithmetic expression as close as possible to a targ
 === Attempt 2 ===
 Numbers: [8, 8, 13, 20, 553]
 Operators: [+, -, *, %]
-Optionak: [(, )]
+Optional: [(, )]
 Available Targets: [676, 6767]
 
 Do you want to swap any of the operators?
@@ -84,8 +84,8 @@ Score for this attempt: 94.129921
 - In 5, the scoring system is modified to eliminate the use of "optimal distance".
 Reasons for this decision include the follwing:
 
-    A. Reduces internal complexity of the project
+    - Reduces internal complexity of the project
 
-    B. Improves gaming experience - I realized during the process of developing this project that, with a scoring system based on optimal distance, the target selection stage of the game becomes meaningless (i.e. since the score does not reflect how "objectively close" to the target the player has gotten to, the player is given no motivation to carefully choose a "reachable / optimal" target)
+    - Improves gaming experience - I realized during the process of developing this project that, with a scoring system based on optimal distance, the target selection stage of the game becomes meaningless (i.e. since the score does not reflect how "objectively close" to the target the player has gotten to, the player is given no motivation to carefully choose a "reachable / optimal" target)
 
-The new formula is given by [ 100 * T / (T + D) ], where T is the target number and D is the user's distance.
+  The new formula is given by [ 100 * T / (T + D) ], where T is the target number and D is the user's distance.
