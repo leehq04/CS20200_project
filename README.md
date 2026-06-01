@@ -89,3 +89,8 @@ Reasons for this decision include the follwing:
     - Improves gaming experience - I realized during the process of developing this project that, with a scoring system based on optimal distance, the target selection stage of the game becomes meaningless (i.e. since the score does not reflect how "objectively close" to the target the player has gotten to, the player is given no motivation to carefully choose a "reachable / optimal" target)
 
   The new formula is given by [ 100 * T / (T + D) ], where T is the target number and D is the user's distance.
+
+
+## LLM Usage
+
+- Timer logic in Program.fs -> was able to create reasonable timer logic that "concurrently" runs 15 seconds and 120 seconds timers within a few prompts.
