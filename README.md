@@ -26,7 +26,7 @@ dotnet build
 
 The goal is to construct an arithmetic expression as close as possible to a target number.
 
-1. Run `dotnet run` from the `SixSevenGen` directory.
+1. Run `dotnet run` from the root directory.
 
 2. You have **three attempts**. At each attempt:
 
