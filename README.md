@@ -31,12 +31,13 @@ The goal is to construct an arithmetic expression as close as possible to a targ
 2. You have **three attempts**. At each attempt:
 
     First,
+    - A 120-second timer starts.
     - You are given **5 numbers** and **4 operators** from `{+, -, *, %}`.
     - You are shown which target numbers from `{67, 676, 6767}` are still available
     - You may swap one of the operators (15 seconds).
 
     Then, 
-    - A 120-second timer starts. Enter your target and expression (example: `6767,96%(13+7)*420+6` )
+    - Enter your target and expression (example: `6767,96%(13+7)*420+6` )
     - Follow this exact format (TARGET,EXPRESSION). Space characters are allowed (ignored)
     - In case of valid input, the used target is removed from future attempts, and your score is shown.
     - In case of invalid input or timeout, 0 score is given. The set of available targets remian unchanged.
