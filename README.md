@@ -79,18 +79,18 @@ Score for this attempt: 99.9
 
 - In 2-2 and 2-3, the operator pool is changed to {+, -, *, %} (replace ^ with %). This is because % has interesting behavior, and makes reaching smaller targets easier. On the other hand, ^ is rather tricky to handle and is not as useful as the other operators.
 
-- In 2-3, the user must make a decision on swapping an operator within 15 seconds. If the user doesnt provide input within 15 seconds, no swap is performed. 
+- In 2-3, the user must make a decision on swapping an operator within 15 seconds. If the user doesn't provide input within 15 seconds, no swap is performed. This is purely a choice made for more interesting gameplay.
 
-- In 3, the timer is changed to run from the beginning of each attempt (i.e. before the swapping stage). This is because the user can exploit the operator-swapping stage to spend more time thinking about an answer.
+- In 3, the timer is changed to run from the beginning of each attempt (i.e. before the swapping stage). This is to prevent the user from exploiting the operator-swapping stage to spend more time thinking about an answer.
 
 - In 3, the timer is changed to last for 120 seconds. This is because after playing a few times I felt that 60 seconds is too short.
 
 - In 5, the scoring system is modified to eliminate the use of "optimal distance".
-Reasons for this decision include the follwing:
+Reasons for this decision include the following:
 
     - Reduces internal complexity of the project
 
-    - Improves gaming experience - I realized during the process of developing this project that, with a scoring system based on optimal distance, the target selection stage of the game becomes meaningless (i.e. since the score does not reflect how "objectively close" to the target the player has gotten to, the player is given no motivation to carefully choose a "reachable / optimal" target)
+    - Improves gaming experience - I realized during the process of developing this project that, with a scoring system based on optimal distance, the target selection stage of the game becomes meaningless (i.e. since the score does not reflect how "objectively close" to the target the player has gotten to, the player is given no motivation to carefully choose a "reachable" target)
 
   The new formula is given by [ 100 * T / (T + D) ], where T is the target number and D is the user's distance.
 
