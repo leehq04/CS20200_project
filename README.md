@@ -46,6 +46,7 @@ The goal is to construct an arithmetic expression as close as possible to a targ
     Then, 
     - Enter your target and expression (example: `6767,96%(13+7)*420+6` )
     - Follow this exact format (TARGET,EXPRESSION). Space characters are allowed (ignored)
+    - Your expression must use each of the provided numbers and operators exactly once. You may use at most one pair of parentheses
     - In case of valid input, the used target is removed from future attempts, and your score is shown.
     - In case of invalid input or timeout, 0 score is given. The set of available targets remian unchanged.
 
