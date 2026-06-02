@@ -10,6 +10,11 @@ Construct arithmetic expressions to get as close as possible to a target number.
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)  
   Verify with: `dotnet --version` (should show `10.x.x`)
 
+### Clone
+```bash
+git clone https://github.com/leehq04/CS20200_project.git`
+```
+
 ### Run
 ```bash
 dotnet run
