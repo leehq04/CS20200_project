@@ -28,7 +28,7 @@ The goal is to construct an arithmetic expression as close as possible to a targ
 
 0. Run `git clone https://github.com/leehq04/CS20200_project.git`
 
-1. Run `dotnet run` from the root directory. This may take a few minutes.
+1. Run `dotnet run` from the root directory (`CS20200_project`). This may take a few minutes.
 
 2. You have **three attempts**. At each attempt:
 
